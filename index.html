@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthy Living</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="toggle-bg">
+    <span class="slider round"></span>
+  </label>
+  <span id="toggle-label">Background: Gradient</span>
+</div>
+
+  <h1>Healthy Living</h1>
+  <p>Become your best self with a balanced daily diet</p>
+</header>
+
+
+  <nav>
+    <ul>
+      <li><a href="#tips">Diet Tips</a></li>
+      <li><a href="#planner">Meal Planner</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="tips" class="section">
+      <h2>Daily Diet Tips</h2>
+      <ul>
+        <li>🍎 Eat at least 5 servings of fruits and vegetables daily.</li>
+        <li>💧 Drink 8 glasses of water per day.</li>
+        <li>🥗 Include protein, fiber, and healthy fats in each meal.</li>
+        <li>🚫 Avoid processed foods and sugary drinks.</li>
+        <li>🕒 Maintain regular eating times and avoid late-night meals.</li>
+      </ul>
+    </section>
+
+    <section id="planner" class="section">
+      <h2>Simple Meal Planner</h2>
+      <table>
+        <tr>
+          <th>Meal</th>
+          <th>Food Suggestions</th>
+        </tr>
+        <tr>
+          <td>Breakfast</td>
+          <td>Oatmeal, banana, boiled egg, green tea</td>
+        </tr>
+        <tr>
+          <td>Lunch</td>
+          <td>Grilled chicken, quinoa, salad, yogurt</td>
+        </tr>
+        <tr>
+          <td>Dinner</td>
+          <td>Vegetable stir-fry, brown rice, tofu</td>
+        </tr>
+        <tr>
+          <td>Snacks</td>
+          <td>Fruit smoothie, almonds, carrots</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About This Site</h2>
+      <p>This website promotes healthy living through proper nutrition and simple meal planning. The goal is to help you create sustainable eating habits for long-term wellness.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Healthy Living | Eat Well, Live Well. | Created by <b> ADITYA  SEVANI </b></p>
+  </footer>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleInput = document.getElementById("toggle-bg");
+    const toggleLabel = document.getElementById("toggle-label");
+    const body = document.body;
+
+    toggleInput.addEventListener("change", () => {
+      body.classList.toggle("bg-image");
+      toggleLabel.textContent = toggleInput.checked
+        ? "Background: Image"
+        : "Background: Gradient";
+    });
+  });
+</script>
+</body>
+</html>
+  

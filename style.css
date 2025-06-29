@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #fceabb, #f8b500, #f6f1d3, #7ed6df, #e0c3fc);
+  background-size: 600% 600%;
+  animation: tropicalGradient 20s ease infinite;
+  color: #2f3542;
+  transition: background 0.5s ease;
+}
+
+/* Gradient animation */
+@keyframes tropicalGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.8);
+  color: #16a085;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Toggle Switch Container */
+.toggle-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px; width: 26px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #16a085;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+#toggle-label {
+  font-weight: bold;
+  color: #16a085;
+  font-size: 1rem;
+}
+
+/* Navigation */
+nav {
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 2px solid #f8b500;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.75rem;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Sections */
+.section {
+  padding: 2rem;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: #e67e22;
+}
+
+/* Diet Tips */
+#tips ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#tips li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background: #f8b500;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #2f3542;
+  font-weight: bold;
+  margin-top: 2rem;
+  border-radius: 25px 25px 0 0;
+}
+
+/* Image Background Class */
+body.bg-image {
+  background: url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
+}
